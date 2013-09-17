@@ -1,13 +1,13 @@
 <div class="box">
 	<%= link_to (image_tag pin.image(:medium)), pin %>
 	<p class="description">
-		<%= pin.description %>
+		<%= simple_format pin.description %>
 	</p>
-	<p>
+	<h5>
 		<strong>
-			Posted by <%= link_to pin.user.name, pin.user %>
+			Por <%= link_to pin.user.name, about_path %>
 		</strong>
-	</p>
+	</h5>
 	<% if current_user == pin.user %>
 		<p>
 		  <%= link_to 'Edit', edit_pin_path(pin) %>
