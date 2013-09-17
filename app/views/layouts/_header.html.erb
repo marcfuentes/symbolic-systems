@@ -10,7 +10,7 @@
       </a>
  
       <!-- Be sure to leave the brand out there if you want it shown -->
-      <%= link_to "SymSys", root_path, class: "brand" %>
+      <%= link_to "Symbolic Systems", root_path, class: "brand" %>
  
       <!-- Everything you want hidden at 940px or less, place within here -->
       <div class="nav-collapse collapse">
@@ -19,6 +19,7 @@
 			   <li><%= link_to "Acerca de Nosotros", about_path %></li>
 		    </ul>
 		    <ul class="nav pull-right">
+            
           <% if user_signed_in? %>
             <li><%= link_to "Add +", new_pin_path %></li>
             <li><%= link_to "Edit Profile", edit_user_registration_path %></li>

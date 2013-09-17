@@ -1,10 +1,21 @@
-/* You could change the font */
-/*$baseFontFamily: Oxygen;
-@import url(http://fonts.googleapis.com/css?family=Oxygen);*/
 
-$btnPrimaryBackground: green;
-$navbarBackgroundHighlight: white;
-$navbarBackground: white;
+// First import journal variables
+@import "bootswatch/cosmo/variables";
+
+// Then bootstrap itself
+@import "bootstrap";
+
+// Bootstrap body padding for fixed navbar
+body { padding-top: 60px; }
+
+// Responsive styles go here in case you want them
+@import "bootstrap-responsive";
+
+// And finally bootswatch style itself
+@import "bootswatch/cosmo/bootswatch";
+
+
+
 
 @import 'bootstrap';
 
@@ -21,25 +32,45 @@ body {
 
 .footer {
 	margin-top: 50px;
-	color: $grayLight;
-	a {
-		color: $gray;
-	}
+
+	
 }
 
+.hero-unit {
+	background: rgb(242,245,246); /* Old browsers */
+background: -moz-linear-gradient(top, rgba(242,245,246,1) 0%, rgba(227,234,237,1) 37%, rgba(200,215,220,1) 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(242,245,246,1)), color-stop(37%,rgba(227,234,237,1)), color-stop(100%,rgba(200,215,220,1))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top, rgba(242,245,246,1) 0%,rgba(227,234,237,1) 37%,rgba(200,215,220,1) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top, rgba(242,245,246,1) 0%,rgba(227,234,237,1) 37%,rgba(200,215,220,1) 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top, rgba(242,245,246,1) 0%,rgba(227,234,237,1) 37%,rgba(200,215,220,1) 100%); /* IE10+ */
+
+  
+}
+
+.well {
+	background: rgb(242,245,246); /* Old browsers */
+background: -moz-linear-gradient(top, rgba(242,245,246,1) 0%, rgba(227,234,237,1) 37%, rgba(200,215,220,1) 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(242,245,246,1)), color-stop(37%,rgba(227,234,237,1)), color-stop(100%,rgba(200,215,220,1))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top, rgba(242,245,246,1) 0%,rgba(227,234,237,1) 37%,rgba(200,215,220,1) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top, rgba(242,245,246,1) 0%,rgba(227,234,237,1) 37%,rgba(200,215,220,1) 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top, rgba(242,245,246,1) 0%,rgba(227,234,237,1) 37%,rgba(200,215,220,1) 100%); /* IE10+ */
+
+
+
+}
 /* Required for jQuery Masonry */
 
 .box {
 	margin: 5px;
 	padding: 5px;
-	font-size: 11px;
+	font-size: 15px;
 	line-height: 1.4em;
 	float: left;
 	-webkit-border-radius: 5px;
 	-moz-border-radius: 5px;
 	border-radius: 5px;
 	box-shadow: 1px 1px 10px #444;
-	width: 214px;
+	width: 370px;
 }
 
 .box img {
@@ -51,7 +82,35 @@ body {
 }
 
 .description {
-	margin: 10px 0 5px;
+	margin: 20px 0 5px;
 }
 
+/* typography */
 
+p {
+
+  
+  font-size: 1.1em;
+  line-height: 1.7em;
+
+  color: #222;
+}
+
+.footer {
+
+
+  
+  padding-top: 95px;
+  padding-bottom: 20px;
+
+  
+  font-size: 15px;
+  background: #080808;
+  
+  
+
+}
+
+.footer p {
+  color: #ffffff;
+}

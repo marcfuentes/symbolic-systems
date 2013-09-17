@@ -1,13 +1,17 @@
 <div class="box">
 	<%= link_to (image_tag pin.image(:medium)), pin %>
-	<p class="description">
-		<%= simple_format pin.description %>
-	</p>
+
+	<h3> <%= link_to pin.name, pin %> </h3>
+
+	<%= link_to 'Seguir Leyendo', pin_path(pin), class: "btn btn-small btn-danger" %>
 	<h5>
 		<strong>
 			Por <%= link_to pin.user.name, about_path %>
 		</strong>
 	</h5>
+
+	
+
 	<% if current_user == pin.user %>
 		<p>
 		  <%= link_to 'Edit', edit_pin_path(pin) %>
