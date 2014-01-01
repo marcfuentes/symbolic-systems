@@ -10,13 +10,22 @@ gem 'faker'
 gem 'will_paginate'
 gem 'bootstrap-will_paginate'
 gem "font-awesome-rails"
+gem "better_errors", ">= 0.7.2", :group => :development
+gem "binding_of_caller", ">= 0.7.1", :group => :development, :platforms => [:mri_19, :rbx]
+gem 'social-share-button'
+
+
+
 
 group :production do
 	gem 'pg'
+	gem 'rails_12factor'
+	gem 'thin'
 end
 
 group :development, :test do
 	gem 'sqlite3'
+	gem 'thin'
 end
 
 group :assets do

@@ -2,18 +2,49 @@
 	<div class="span8 offset2">
 		<div class="well">
 			<%= image_tag @pin.image %>
+			</br>
+			</br>
 
 			<h2><%= @pin.name %></h2>
+			</br>
 			<p>
-
 			  <%= simple_format @pin.description %>
 			</p>
+			
 			<h3>
+				
 			 Por <%= @pin.user.name %>
+
 			</h3>
+			<h5>Comparte el articulo en redes sociales</h5><%= social_share_button_tag(@pin.name) %>
+
+
 			<% if current_user == @pin.user %>
-				<%= link_to 'Edit', edit_pin_path(@pin) %> |
+				<%= link_to 'Editar', edit_pin_path(@pin), class: "btn btn-warning" %> 
 			<% end %>
+			</br>
+			</br>
+
+
+
+			 <h3>Deja tu comentario </h3>
+			 
+
+              <div id="comments">
+                <%= render :partial => @pin.comments %>
+              </div>
+              <%= simple_form_for [@pin, Comment.new] do |f| %>
+              <p>
+
+              	 <%= f.input :name, :label => "Nombre" %>
+                 <%= f.input :body, :label => "Comentario", as: :text, input_html: 
+                 { rows: "3" } %>
+              </p>
+              <p><%= f.submit "Publicar comentario", class: "btn btn-danger" %></p>
+            <% end %>
+            
+          </div>
+        </div>
 			
 		</div>
 	</div>

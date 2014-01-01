@@ -1,4 +1,12 @@
 Omrails::Application.routes.draw do
+  resources :comments
+
+  resources :pins  do
+
+     resources :comments
+  end
+
+
   get "users/show"
 
   resources :pins
